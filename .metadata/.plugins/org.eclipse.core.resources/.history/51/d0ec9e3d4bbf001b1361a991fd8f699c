@@ -1,0 +1,38 @@
+package application;
+
+import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.Scanner;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.Date;
+
+import JDBC.AlunoJDBC;
+import JDBC.db;
+import entities.Aluno;
+
+public class Programa {
+
+	public static void main(String[] args) throws IOException, ParseException, SQLException {
+		// TODO Auto-generated method stub
+			Scanner console = new Scanner(System.in);
+		
+			Aluno a = new Aluno();
+			AlunoJDBC acaoBanco =  new AlunoJDBC();
+		
+			a.setNome("Lucas");
+			a.setSexo("Masculino");
+			//System.out.println("Data:");
+			//String data = console.nextLine();
+			Calendar c = new GregorianCalendar(1999, 05, 12);
+			
+			long Dt_Nasc = c.getTimeInMillis(); 
+			a.setDt_Nasc(Dt_Nasc);
+			acaoBanco.salvar(a);
+		
+	}
+
+}

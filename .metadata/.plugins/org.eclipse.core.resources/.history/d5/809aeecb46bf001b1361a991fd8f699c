@@ -1,0 +1,32 @@
+package JDBC;
+
+import java.sql.Connection;
+import java.util.List;
+
+import entities.Aluno;
+
+public class AlunoJDBC {
+	
+	
+	
+	public void salvar(Aluno a) {
+
+		Connection con = db.getConexao();
+		System.out.println("Conexão realizada com sucesso");
+	}
+	
+	public List<Aluno> listar() {
+		
+		return null;
+	}
+	
+	public void Apagar(int id) {
+		
+		
+	}
+	
+	public void Alterar(Aluno a) {
+		
+		
+	}
+}

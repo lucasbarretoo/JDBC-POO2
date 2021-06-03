@@ -1,0 +1,18 @@
+package application;
+
+import JDBC.db;
+
+public class Programa {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		try {
+			Connection con = db.getConexao();
+			System.out.println("Conexão realizada com sucesso");
+		}catch(SQLException e){
+			System.out.println(e);
+		}
+	}
+
+}

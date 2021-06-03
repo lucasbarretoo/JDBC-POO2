@@ -1,0 +1,15 @@
+package JDBC;
+
+public class AlunoJDBC {
+	
+	
+	
+	public void salvar(Aluno a) {
+		
+	}
+	
+	public List<Aluno> listar() {
+		
+		return 0;
+	}
+}

@@ -1,0 +1,29 @@
+package JDBC;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.sql.Connection;
+import java.util.Properties;
+
+public class db {
+	
+	
+	private static Connection Conexao;
+	
+	public static Properties getPropriedades() throws IOException {
+		Properties propriedades = new Properties();
+		FileInputStream file = new FileInputStream("./propriedades/db.properties");
+		propriedades.load(file);
+		
+		return propriedades;
+	}
+	
+	public static Connection getConexao() throws IOException {
+		
+		Properties p = db.getPropriedades();
+		
+		Conexao = DriverManager.getConnection();
+		return 0;
+	}
+	
+}

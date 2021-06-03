@@ -1,0 +1,39 @@
+package JDBC;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.List;
+
+import entities.Aluno;
+
+public class AlunoJDBC {
+	
+	
+	
+	public void salvar(Aluno a) throws IOException, SQLException {
+
+		Connection con = db.getConexao();
+		System.out.println("Conexão realizada com sucesso");
+		
+		sql = "insert into aluno(Nome, Sexo, Dt_Nasc)"
+
+		db.closeConexao();
+		System.out.println("Conexão finalizada com sucesso");
+	}
+	
+	public List<Aluno> listar() {
+		
+		return null;
+	}
+	
+	public void Apagar(int id) {
+		
+		
+	}
+	
+	public void Alterar(Aluno a) {
+		
+		
+	}
+}

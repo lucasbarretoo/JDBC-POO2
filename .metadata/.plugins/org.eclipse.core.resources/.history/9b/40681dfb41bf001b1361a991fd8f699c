@@ -1,0 +1,15 @@
+package JDBC;
+
+import java.sql.Collection;
+import java.util.Properties;
+
+public class db {
+	
+	
+	private static Collection Conexao;
+	
+	public static Properties getPropriedades() {
+		
+	}
+	
+}

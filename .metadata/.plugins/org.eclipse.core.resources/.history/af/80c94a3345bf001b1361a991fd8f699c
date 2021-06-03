@@ -1,0 +1,10 @@
+import java.sql.Date;
+
+public class aluno {
+	
+	private int id;
+	private String Nome;
+	private String Sexo;
+	private Date Dt_Nasc;
+	
+}

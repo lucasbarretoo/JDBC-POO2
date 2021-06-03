@@ -1,0 +1,12 @@
+package JDBC;
+
+import java.util.Collection;
+
+public class db {
+	
+	
+	private static Collection Conexao;
+	
+	public static Properties;
+	
+}

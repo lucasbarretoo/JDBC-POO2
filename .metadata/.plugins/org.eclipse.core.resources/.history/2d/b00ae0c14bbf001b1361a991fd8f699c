@@ -1,0 +1,33 @@
+package application;
+
+import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Scanner;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.Date;
+
+import JDBC.AlunoJDBC;
+import JDBC.db;
+import entities.Aluno;
+
+public class Programa {
+
+	public static void main(String[] args) throws IOException, ParseException, SQLException {
+		// TODO Auto-generated method stub
+			Scanner console = new Scanner(System.in);
+		
+			Aluno a = new Aluno();
+			AlunoJDBC acaoBanco =  new AlunoJDBC();
+		
+			a.setNome("Lucas");
+			a.setSexo("Masculino");
+			java.util.Date dataUtil = new java.util.Date();
+			java.sql.Date dataSql = new java.sql.Date(dataUtil.getTime());
+			a.setDt_Nasc(dataSql);
+			acaoBanco.salvar(a);
+		
+	}
+
+}

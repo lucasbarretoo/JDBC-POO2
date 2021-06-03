@@ -1,0 +1,18 @@
+package JDBC;
+
+import java.io.FileInputStream;
+import java.sql.Connection;
+import java.util.Properties;
+
+public class db {
+	
+	
+	private static Connection Conexao;
+	
+	public static Properties getPropriedades() {
+		Properties propriedades = new Properties();
+		FileInputStream file = new FileInputStream("./propriedades/db.properties");
+		propriedades.load(file);
+	}
+	
+}

@@ -1,0 +1,23 @@
+package application;
+
+import java.sql.SQLException;
+import java.sql.Connection;
+
+import JDBC.db;
+
+public class Programa {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		try {
+			Connection con = db.getConexao();
+			System.out.println("Conexão realizada com sucesso");
+			
+			db.closeConexao;
+		}catch(SQLException e){
+			System.out.println(e);
+		}
+	}
+
+}

@@ -1,0 +1,58 @@
+package JDBC;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+import  java.sql.Date;
+
+import entities.Aluno;
+
+public class AlunoJDBC {
+	
+	
+	Connection con;
+	String sql;
+	PreparedStatement pst;
+	
+	public void salvar(Aluno a) throws IOException, SQLException {
+
+		Connection con = db.getConexao();
+		System.out.println("Conexão realizada com sucesso");
+		
+		sql = "insert into aluno(Nome, Sexo, Dt_Nasc) values (?, ?, ?)";
+		
+		pst = con.prepareStatement(sql);
+		pst.setString(1, a.getNome());
+		pst.setString(2, a.getSexo());
+
+		Date dataSql = new Date(a.getDt_Nasc().getTime());
+		pst.setDate(3, dataSql);
+		
+		pst.executeUpdate();
+		System.out.println("Cadastro do aluno realizado com sucesso");
+		
+		db.closeConexao();
+		System.out.println("Conexão finalizada com sucesso");
+	}
+	
+	public List<Aluno> listar() throws IOException, SQLException {
+		Connection con = db.getConexao();
+		System.out.println("Conexão realizada com sucesso");
+		sql = "select * from aluno";
+		ResultSet pst = con.executeQuery(sql);
+		return null;
+	}
+	
+	public void Apagar(int id) {
+		
+		
+	}
+	
+	public void Alterar(Aluno a) {
+		
+		
+	}
+}
